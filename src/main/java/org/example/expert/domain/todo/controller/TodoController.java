@@ -42,10 +42,6 @@ public class TodoController {
         LocalDateTime startDateTime = startDate != null ? startDate.atStartOfDay() : LocalDate.of(1000, 1, 1).atStartOfDay();
         LocalDateTime endDateTime = endDate != null ? endDate.atTime(LocalTime.MAX) : LocalDateTime.now();
 
-        System.out.println("Weather: " + weather);
-        System.out.println("StartDate: " + startDateTime);
-        System.out.println("EndDate: " + endDateTime);
-
         Page<TodoResponse> todos = todoService.getTodos(page, size, weather, startDateTime, endDateTime);
 
         return ResponseEntity.ok(todos);
