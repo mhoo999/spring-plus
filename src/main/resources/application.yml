@@ -12,10 +12,10 @@
 
 Spring:
   application:
-    name: outsourcing
+    name: experttest
 
   datasource:
-    url: jdbc:mysql://localhost:3306/outsourcing
+    url: jdbc:mysql://localhost:3306/experttest
     username: ${DB_USER:root}
     password: ${DB_PASSWORD:root}
     driver-class-name: com.mysql.cj.jdbc.Driver
